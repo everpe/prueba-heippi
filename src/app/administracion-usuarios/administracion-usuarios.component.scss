@@ -1,6 +1,8 @@
 .titulo-principal {
+    padding:1% 2% 1% 2%;
     text-align: center;
     display: flex;
+
 }
 
 .titulo-texto {
@@ -55,7 +57,18 @@ mat-cell button mat-icon, mat-cell a.actionBtn mat-icon {
   width: 90%;
   margin: auto;
   margin-top: 20px;
-  background: gray;
+  text-align: center;
+  .informacionTotales{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    img{
+      max-width: 100px;
+    }
+    .mat-card{
+      text-align: center;
+    }
+  }
 }
 
 .green-ball{

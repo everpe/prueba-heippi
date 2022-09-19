@@ -4,6 +4,10 @@ import { CommonModule } from '@angular/common';
 import { AdministracionUsuariosModule } from './administracion-usuarios/administracion-usuarios.module';
 
 const routes: Routes = [
+  {
+    path: '**',
+    redirectTo: 'administracion-usuarios'
+  } ,
   { 
     path: 'administracion-usuarios', 
     loadChildren: () =>

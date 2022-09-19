@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AdministracionUsuariosService } from '../../services/administracion-usuarios.service';
+import { UserDto } from '../../Dtos/UserDto';
 
 @Component({
   selector: 'app-detalle-usuario',
@@ -15,7 +16,7 @@ export class DetalleUsuarioComponent implements OnInit {
   dataSource: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  @Input() usuario: any;
+  @Input() usuario: UserDto;
   cantidadPostsUsuario = 0;
   constructor(private administracionService: AdministracionUsuariosService) { }
 

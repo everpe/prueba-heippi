@@ -2,7 +2,16 @@
   width: 90%;
   margin: auto;
   margin-top: 20px;
-  background: gray;
+  img{
+    max-width: 100px;
+  }
+  .mat-card-content{
+    .mat-card{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
 }
 
 table {
@@ -18,5 +27,5 @@ td, th {
 }
 
 .link {
-  color: white;
+  text-decoration: none;
 }

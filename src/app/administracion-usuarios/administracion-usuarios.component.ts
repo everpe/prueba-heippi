@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { UserDto } from './Dtos/UserDto';
 import { AdministracionUsuariosService } from './services/administracion-usuarios.service';
 
 @Component({
@@ -18,7 +19,7 @@ export class AdministracionUsuariosComponent implements OnInit {
   
   cantidadUsuariosTotal = 0;
   cantidadPostsTotal = 0;
-  usuarioSeleccionado: any = null;
+  usuarioSeleccionado: UserDto;
   showUsuarioDetalle = false;
   constructor(private administracionService: AdministracionUsuariosService) { }
 
@@ -43,7 +44,7 @@ export class AdministracionUsuariosComponent implements OnInit {
   }
 
   viewPersona(row: any) {
-    console.log('El usuario seleccionado es: ', row);
+    //console.log('El usuario seleccionado es: ', row);
     this.usuarioSeleccionado = row;
     this.showUsuarioDetalle = true;
   }
